@@ -2,9 +2,9 @@
   "version": "0.1",
   "name": "Vector Calculation",
   "description": "The app calculates the dot product, the cross product, the sum and the difference of two vectors.",
-  "launch_path": "/vector-calc",
+  "launch_path": "/vector-calc-fb2",
   "icons": {
-    "128": "/vector-calc/icon-128.png"
+    "128": "/vector-calc-fb2/icon-128.png"
   },
   "developer": {
     "name": "Your Name",
