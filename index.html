@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vector Calculation</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="jquery/jquery.mobile-1.3.1.min.css" />
+  <script src="jquery/jquery-1.9.1.min.js"></script>
+  <script src="jquery/jquery.mobile-1.3.1.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="ui.js"></script>
+  <script type="text/javascript" src="vector-calc.js"></script>
+  <script>
+	window.onload = init0;
+  </script>    
+</head>
+
+<body>
+<!-- Start of main page -->
+<div data-role="page" id="main-page">
+<div data-role="header">
+	<h1>Vector Calculation</h1>
+</div><!-- /header -->	
+<div data-role="content">	
+	<p>Please enter the vector components</p>
+	<table>
+		<tr>
+			<td rowspan="3"> a = </td>
+			<td rowspan="3" class="bra"> </td>
+			<td><input type="text" id="a0" data-role="none" size="6"/></td>
+			<td rowspan="3" class="ket"> </td>
+			<td rowspan="3" class="emptyspace"> </td>
+			<td rowspan="3"> b = </td>
+			<td rowspan="3" class="bra"> </td>
+			<td><input type="text" id="b0" data-role="none" size="6"/></td>
+			<td rowspan="3" class="ket"> </td>
+		</tr>
+		<tr>
+			<td><input type="text" id="a1" data-role="none" size="6"/></td>
+			<td><input type="text" id="b1" data-role="none" size="6"/></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="a2" data-role="none" size="6"/></td>
+			<td><input type="text" id="b2" data-role="none" size="6"/></td>
+		</tr>
+	</table>
+	
+	<p>Select mathematical operation</p>
+	<div data-role="controlgroup" data-type="horizontal">
+		<input type="button" value="a*b" id="button-dot" />
+		<input type="button" value="axb" id="button-cross" />
+		<input type="button" value="a+b" id="button-plus" />
+		<input type="button" value="a-b" id="button-minus" />
+	</div>	
+</div><!-- /content -->
+</div><!-- /page -->
+
+<!-- Start of result vector page -->
+<div data-role="page" id="result-vector-page" data-add-back-btn="true">
+<div data-role="header">
+	<h1>Result</h1>
+</div><!-- /header -->	
+<div data-role="content">
+	<table>
+		<tr>
+			<td rowspan="3" class="bra"></td>
+			<td class="outnum"><div id="out-a0"></div></td>
+			<td rowspan="3" class="ket"></td>
+			<td rowspan=3"><div id="out-operator"></div></td>
+			<td rowspan="3" class="bra"></td>
+			<td class="outnum"><div id="out-b0"></div></td>
+			<td rowspan="3" class="ket"></td>
+			<td rowspan="3">=</td>
+			<td rowspan="3" class="bra"></td>
+			<td class="outnum"><div id="out-c0"></div></td>
+			<td rowspan="3" class="ket"></td>
+		</tr>
+		<tr>
+			<td class="outnum"><div id="out-a1"></div></td>
+			<td class="outnum"><div id="out-b1"></div></td>
+			<td class="outnum"><div id="out-c1"></div></td>
+		</tr>
+		<tr>
+			<td class="outnum"><div id="out-a2"></div></td>
+			<td class="outnum"><div id="out-b2"></div></td>
+			<td class="outnum"><div id="out-c2"></div></td>
+		</tr>
+	</table>
+</div><!-- /content -->
+</div><!-- /page -->
+
+<!-- Start of result scalar page -->
+<div data-role="page" id="result-scalar-page" data-add-back-btn="true">
+<div data-role="header">
+	<h1>Result</h1>
+</div><!-- /header -->	
+<div data-role="content">
+	<table>
+		<tr>
+			<td rowspan="3" class="bra"></td>
+			<td class="outnum"><div id="out-scal-a0"></div></td>
+			<td rowspan="3" class="ket"></td>
+			<td rowspan=3">*</td>
+			<td rowspan="3" class="bra"></td>
+			<td class="outnum"><div id="out-scal-b0"></div></td>
+			<td rowspan="3" class="ket"></td>
+			<td rowspan=3">=</td>
+			<td rowspan=3" class="outnum"><div id="out-scal-s"></div></td>
+		</tr>
+		<tr>
+			<td class="outnum"><div id="out-scal-a1"></div></td>
+			<td class="outnum"><div id="out-scal-b1"></div></td>
+		</tr>
+		<tr>
+			<td class="outnum"><div id="out-scal-a2"></div></td>
+			<td class="outnum"><div id="out-scal-b2"></div></td>
+		</tr>
+	</table>
+</div><!-- /content -->
+</div><!-- /page -->
+	
+</body>
+</html>
